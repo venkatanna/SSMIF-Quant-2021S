@@ -31,8 +31,8 @@ class Portfolio:
 		totalValue = 0
 
 		# Calculate daily portfolio value and daily returns
-		for row in range(0, len(self.priceData)): # iterate trough rows
-			for i in self.basketPortfolio: # iterate trough tickers
+		for row in range(0, len(self.priceData)): # iterate through rows
+			for i in self.basketPortfolio: # iterate through tickers
 				totalValue += self.priceData[i].iloc[row] * self.basketPortfolio[i]
 			self.priceData['Portfolio Value'].iloc[row] = totalValue
 			if row != 0:
@@ -109,8 +109,8 @@ class Portfolio:
 		totalValue = 0
 
 		# Calculate daily portfolio value and daily returns
-		for row in range(0, len(marginalData)): # iterate trough rows
-			for i in marginalPortfolio: # iterate trough tickers
+		for row in range(0, len(marginalData)): # iterate through rows
+			for i in marginalPortfolio: # iterate through tickers
 				totalValue += marginalData[i].iloc[row] * marginalPortfolio[i]
 			marginalData['Portfolio Value'].iloc[row] = totalValue
 			if row != 0:
@@ -132,7 +132,7 @@ class Portfolio:
 		DDCurrent = 0
 		DDTotal = 0
 
-		# Iterate trough the daily portfolio values
+		# Iterate through the daily portfolio values
 		for value in self.priceData['Portfolio Value']:
 			# If the current value is greater than the current peak, set the peak equal to the current value
 			# Reset trough value
